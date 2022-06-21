@@ -15,8 +15,8 @@
     <h2>Próximos eventos</h2>
     <p class="subtitle">Veja os eventos dos próximos dias</p>
     <div class="row" id="cards-container">
+        
         @foreach($events as $event)
-
         <div class="card col-md-3">
             <img src="/img/event_placeholder.jpg" alt="{{ $event->title }}">
             <div class="card-body">
@@ -26,8 +26,8 @@
                 <a href="#" class="btn btn-primary">Saber mais</a>
             </div>
         </div>  
-
         @endforeach
+    
     </div>
 </div>
 
