@@ -109,9 +109,7 @@ header {
 }
 
 .form-group{
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
+    margin-bottom: 10px;
 }
 
 #event-create-container label {
@@ -126,13 +124,14 @@ header {
 }
 
 /* event page */
-#immage-container,
+#image-container,
 #info-container {
     margin-top: 30px;
 }
 
 #image-container img {
-    border-radius: 10%;
+    width: 100%;
+    border-radius: 10px;
 }
 
 #info-contaier h1 {
@@ -159,8 +158,17 @@ header {
     margin-right: 5px;
 }
 
-#event-container #event-submit {
+#info-container #event-submit {
     margin: 20px 0;
+}
+
+#items-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+#itens-list {
+    display: flex;
 }
 
 /* footer */
