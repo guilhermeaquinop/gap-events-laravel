@@ -9,15 +9,19 @@
     <form action="/events" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
-            <label for="title">Imagem</label>
+            <label for="title">Imagem do evento:</label>
             <input type="file" class="form-control-file" id="image" name="image" placeholder="Nome do evento">
         </div>
         <div class="form-group">
-            <label for="title">Evento</label>
+            <label for="title">Evento:</label>
             <input type="text" class="form-control" id="title" name="title" placeholder="Nome do evento">
         </div>
         <div class="form-group">
-            <label for="title">Cidade</label>
+            <label for="date">Data do evento:</label>
+            <input type="date" class="form-control" id="date" name="date">
+        </div>
+        <div class="form-group">
+            <label for="title">Cidade:</label>
             <input type="text" class="form-control" id="city" name="city" placeholder="Local do evento">
         </div>
         <div class="form-group">
@@ -30,6 +34,24 @@
         <div class="form-group">
             <label for="title">Descrição</label>
             <textarea name="description" id="description" class="form-control" placeholder="Descreva seu evento"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="title">Adicione itens de infraestrutura:</label>
+            <div class="form-group">
+                <input type="checkbox" name="items[]" value="Cadeiras"> Cadeiras
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="items[]" value="Palco"> Palco
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="items[]" value="Bebidas"> Bebidas
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="items[]" value="Open Food"> Open Food
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="items[]" value="Brindes"> Brindes
+            </div>
         </div>
         <input type="submit" class="btn btn-primary" value="Criar Evento">
     </form>
