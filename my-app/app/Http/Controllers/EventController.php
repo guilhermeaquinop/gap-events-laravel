@@ -19,7 +19,7 @@ class EventController extends Controller
         return view('events.create');
     }
 
-    //pega os dados através do paramentro request
+    //Pega os dados através do paramentro request
     public function store(Request $request) {
         
         $event = new Event;
@@ -28,9 +28,20 @@ class EventController extends Controller
         $event->city = $request->city;
         $event->private = $request->private;
         $event->description = $request->description;
-
+        //Verifica se o arquivo é do tipo image
+        if($request->hasFile('image') && $request->file('image')->isValid()){
+            $requestImage = $request->image;
+            
+            $extension = $requestImage->extension();
+            
+            $imageName = md5($requestImage->getClientOriginalName() . strtotime('now')) . "." . $extension;
+            
+            $requestImage->move(public_path('img/events'), $imageName);
+            
+            $event->image = $imageName;
+        }
         $event->save();
 
-        return redirect('/');   
+        return redirect('/')->with('msg', 'Evento criado com sucesso!');   
     }
 }
