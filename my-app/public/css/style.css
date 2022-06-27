@@ -131,6 +131,7 @@ header {
 
 #image-container img {
     width: 100%;
+    height: 100%;
     border-radius: 10px;
 }
 
@@ -170,6 +171,21 @@ header {
 #itens-list {
     display: flex;
 }
+
+#description-container {
+    margin-top: 30px;
+}
+
+/* dashboard */
+a {
+    text-decoration: none;
+}
+
+.dashboard-title-container {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
 
 /* footer */
 footer {
